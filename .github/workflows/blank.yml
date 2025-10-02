@@ -15,6 +15,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Install libraries
+        run: docker compose run --rm v install khalyomede.expect
+
       - name: Test
         run: docker compose run --rm v -N -W test .
 
@@ -23,6 +26,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
+      - name: Install libraries
+        run: docker compose run --rm v0411 install khalyomede.expect
 
       - name: Test (v0.4.11)
         run: docker compose run --rm v0411 -N -W test .
@@ -33,6 +39,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Install libraries
+        run: docker compose run --rm v0410 install khalyomede.expect
+
       - name: Test (v0.4.10)
         run: docker compose run --rm v0410 -N -W test .
 
@@ -42,6 +51,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Install libraries
+        run: docker compose run --rm v049 install khalyomede.expect
+
       - name: Test (v0.4.9)
         run: docker compose run --rm v049 test .
 
@@ -50,6 +62,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
+      - name: Install libraries
+        run: docker compose run --rm v048 install khalyomede.expect
 
       - name: Test (v0.4.8)
         run: docker compose run --rm v048 test .
