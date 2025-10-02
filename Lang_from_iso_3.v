@@ -1,7 +1,7 @@
 module lang
 
 pub fn Lang.from_iso_3(code string) ?Lang {
-    return match code {
+    return match Lang.normalize(code) {
         'aar' { Lang.aa }
         'abk' { Lang.ab }
         'afr' { Lang.af }
