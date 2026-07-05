@@ -7,6 +7,22 @@ services:
       - ./:/root/app
       - ./docker-data/v/.vmodules:/root/.vmodules
 
+  v050:
+    image: khalyomede/vlang:0.5.0-alpine
+    entrypoint: v
+    working_dir: /root/app
+    volumes:
+      - ./:/root/app
+      - ./docker-data/v/.vmodules:/root/.vmodules
+
+  v0412:
+    image: khalyomede/vlang:0.4.12-alpine
+    entrypoint: v
+    working_dir: /root/app
+    volumes:
+      - ./:/root/app
+      - ./docker-data/v/.vmodules:/root/.vmodules
+
   v0411:
     image: khalyomede/vlang:0.4.11-alpine
     entrypoint: v
@@ -17,22 +33,6 @@ services:
 
   v0410:
     image: khalyomede/vlang:0.4.10-alpine
-    entrypoint: v
-    working_dir: /root/app
-    volumes:
-      - ./:/root/app
-      - ./docker-data/v/.vmodules:/root/.vmodules
-
-  v049:
-    image: khalyomede/vlang:0.4.9-alpine
-    entrypoint: v
-    working_dir: /root/app
-    volumes:
-      - ./:/root/app
-      - ./docker-data/v/.vmodules:/root/.vmodules
-
-  v048:
-    image: khalyomede/vlang:0.4.8-alpine
     entrypoint: v
     working_dir: /root/app
     volumes:
